@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Amiso - Professional Cleaning Services</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+      }
+
+      /* Slider Section */
+      .slider-container {
+        display: flex;
+        overflow: hidden;
+      }
+
+      .slide {
+        flex-shrink: 0;
+        width: 100%;
+        transition: transform 0.5s ease-in-out;
+      }
+
+      /* Apply background only to header */
+    </style>
+  </head>
+  <body class="bg-white">
+    <!-- Remove background from body -->
+    <header
+      class="w-full h-[1000px] bg-cover bg-center"
+      style="background-image: url('/assets/bg.jpg')"
+    >
+      <div class="text-white py-3">
+        <div
+          class="container mx-auto px-4 flex flex-col sm:flex-row justify-between items-center"
+        >
+          <div
+            class="flex flex-wrap justify-center sm:justify-start gap-6 mb-2 sm:mb-0"
+          >
+            <span class="flex items-center gap-2 text-sm">
+              <i data-lucide="phone" class="w-4 h-4"></i>
+              +123-456-7890
+            </span>
+            <span class="flex items-center gap-2 text-sm">
+              <i data-lucide="mail" class="w-4 h-4"></i>
+              info@yourdomain.com
+            </span>
+          </div>
+          <div class="flex items-center gap-6">
+            <div class="flex gap-4">
+              <a href="#" class="hover:text-cyan-100"
+                ><i data-lucide="facebook" class="w-4 h-4"></i
+              ></a>
+              <a href="#" class="hover:text-cyan-100"
+                ><i data-lucide="twitter" class="w-4 h-4"></i
+              ></a>
+              <a href="#" class="hover:text-cyan-100"
+                ><i data-lucide="instagram" class="w-4 h-4"></i
+              ></a>
+              <a href="#" class="hover:text-cyan-100"
+                ><i data-lucide="linkedin" class="w-4 h-4"></i
+              ></a>
+            </div>
+            <a
+              href="#"
+              class="bg-white text-cyan-500 px-4 py-1 rounded text-sm font-semibold hover:bg-cyan-50"
+              >GET A QUOTE</a
+            >
+          </div>
+        </div>
+      </div>
+      <!-- Apply backdrop blur effect to navbar -->
+      <nav
+        class="container mx-auto px-4 flex flex-col sm:flex-row justify-between items-center py-6 backdrop-blur-sm bg-white/50"
+      >
+        <a href="/" class="text-2xl font-bold">
+          <img src="assets/logo.webp" alt="Amiso Logo" class="h-10" />
+        </a>
+        <div class="flex flex-wrap justify-center gap-6">
+          <a href="/" class="font-medium hover:text-cyan-500">HOME</a>
+          <a href="/about" class="font-medium hover:text-cyan-500">ABOUT</a>
+          <a href="/pages" class="font-medium hover:text-cyan-500">PAGES</a>
+          <a href="/gallery" class="font-medium hover:text-cyan-500">GALLERY</a>
+          <a href="/blog" class="font-medium hover:text-cyan-500">BLOG</a>
+          <a href="/contact" class="font-medium hover:text-cyan-500">CONTACT</a>
+        </div>
+      </nav>
+      <section class="relative text-white py-20 lg:py-32">
+        <div class="container mx-auto px-4">
+          <div class="max-w-2xl">
+            <h2 class="text-lg mb-4 tracking-wide">RENEW YOUR LOOK</h2>
+            <h1
+              class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-8 leading-tight tracking-wide"
+            >
+              A TRADITION OF<br />
+              QUALITY CLEANING
+            </h1>
+            <a
+              href="#"
+              class="inline-block px-8 py-3 border-2 border-white text-white hover:bg-white hover:text-cyan-500 transition duration-300 font-medium tracking-wide"
+            >
+              Contact Us
+            </a>
+          </div>
+        </div>
+        <button
+          id="prevSlide"
+          class="absolute left-4 top-1/2 -translate-y-1/2 p-2 bg-white/20 rounded-full hover:bg-white/30"
+        >
+          <i data-lucide="chevron-left" class="w-6 h-6"></i>
+        </button>
+        <button
+          id="nextSlide"
+          class="absolute right-4 top-1/2 -translate-y-1/2 p-2 bg-white/20 rounded-full hover:bg-white/30"
+        >
+          <i data-lucide="chevron-right" class="w-6 h-6"></i>
+        </button>
+      </section>
+    </header>
+
+    <main>
+      <section class="py-20 bg-cyan-500">
+        <div class="container mx-auto px-4">
+          <div class="grid md:grid-cols-3 gap-12"> <!-- Increased gap -->
+            <!-- Service 1 -->
+            <div class="text-center p-8 bg-white rounded-lg shadow-lg">
+              <div
+                class="inline-flex items-center justify-center p-4 mb-6 text-cyan-500 bg-cyan-100 rounded-full"
+              >
+                <i data-lucide="sparkles" class="w-16 h-16"></i>
+              </div>
+              <h3 class="text-2xl font-bold mb-4">Professional Cleaning</h3>
+              <p class="text-gray-600 leading-relaxed">
+                Housekeeping is responsible for minor security in hotel ecosystems
+                for food and cleanliness.
+              </p>
+            </div>
+      
+            <!-- Service 2 -->
+            <div class="text-center p-8 bg-white rounded-lg shadow-lg">
+              <div
+                class="inline-flex items-center justify-center p-4 mb-6 text-cyan-500 bg-cyan-100 rounded-full"
+              >
+                <i data-lucide="clock" class="w-16 h-16"></i>
+              </div>
+              <h3 class="text-2xl font-bold mb-4">Fast and Efficient</h3>
+              <p class="text-gray-600 leading-relaxed">
+                Our aim is to keep the house clean – your aim will help through
+                digital innovation world summits.
+              </p>
+            </div>
+      
+            <!-- Service 3 -->
+            <div class="text-center p-8 bg-white rounded-lg shadow-lg">
+              <div
+                class="inline-flex items-center justify-center p-4 mb-6 text-cyan-500 bg-cyan-100 rounded-full"
+              >
+                <i data-lucide="shield" class="w-16 h-16"></i>
+              </div>
+              <h3 class="text-2xl font-bold mb-4">Renew Your Look</h3>
+              <p class="text-gray-600 leading-relaxed">
+                Both of us take a lot of time getting cleaned and beautified. Clean
+                home. Professional service.
+              </p>
+            </div>
+          </div>
+        </div>
+      
+        <div class="container mx-auto px-4 mt-12"> <!-- Added margin-top -->
+          <div class="grid md:grid-cols-3 gap-12"> <!-- Increased gap -->
+            <!-- Left Column -->
+            <div>
+              <h2
+                class="text-4xl md:text-5xl font-bold mb-4"
+                style="color: #004274;"
+              >
+                A Clean House is a Happy Place!
+              </h2>
+              <p class="text-xl text-white font-semibold">
+                Washla has met the demands of a growing world.
+              </p>
+            </div>
+      
+            <!-- Middle Column -->
+            <div class="leading-relaxed text-white text-lg">
+              <span class="text-5xl font-bold float-left mr-2">W</span>
+              ashla customers have a tremendous opportunity to answer the call of
+              logistic needs across the globe. Has 26 affiliated state soybean
+              associations representing 30 soybean-producing states.
+            </div>
+      
+            <!-- Right Column -->
+            <div class="leading-relaxed text-white text-lg">
+              World's leading non-asset-based supply chain management companies, we
+              design and implement industry-leading solutions. We specialize in
+              intelligent & effective search and believe in the power of
+              partnerships to grow business.
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+          <span class="block text-gray-500 text-center text-sm mb-2"
+            >WHY CHOOSE US</span
+          >
+          <h2 class="text-[#004274] text-4xl font-bold text-center mb-4">
+            Tradition of Trust
+          </h2>
+          <p class="text-gray-600 text-center max-w-2xl mx-auto mb-16">
+            We specialise in intelligent & effective Search and believes in the
+            power of partnerships to grow business.
+          </p>
+          <div class="grid md:grid-cols-3 gap-12">
+            <div class="text-center">
+              <div class="inline-flex p-6 rounded-full bg-cyan-100 mb-6">
+                <i data-lucide="user-2" class="w-16 h-16 text-cyan-500"></i>
+              </div>
+              <h3 class="text-xl font-bold mb-4">Professional Team</h3>
+              <p class="text-gray-500 leading-relaxed">
+                Our team uses a sanitizing solution to wipe down light switches
+                doorknobs.
+              </p>
+            </div>
+            <div class="text-center">
+              <div class="inline-flex p-6 rounded-full bg-cyan-100 mb-6">
+                <i data-lucide="clock" class="w-16 h-16 text-cyan-500"></i>
+              </div>
+              <h3 class="text-xl font-bold mb-4">24/7 Services</h3>
+              <p class="text-gray-500 leading-relaxed">
+                We encourage our customers to let us know in advance of an
+                appointment.
+              </p>
+            </div>
+            <div class="text-center">
+              <div class="inline-flex p-6 rounded-full bg-cyan-100 mb-6">
+                <i
+                  data-lucide="check-circle"
+                  class="w-16 h-16 text-cyan-500"
+                ></i>
+              </div>
+              <h3 class="text-xl font-bold mb-4">Service Guarantee</h3>
+              <p class="text-gray-500 leading-relaxed">
+                We are telling our team members to switch out all cleaning
+                cloths and mopheads.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+          <div class="flex flex-wrap items-center">
+            <div class="w-full md:w-1/2 mb-8 md:mb-0">
+              <div class="bg-amber-400 rounded-lg overflow-hidden">
+                <img
+                  src="assets/yellow.jpg"
+                  alt="Cleaner"
+                  class="w-full h-auto"
+                />
+              </div>
+            </div>
+            <div class="w-full md:w-1/2 md:pl-16">
+              <span class="text-cyan-500 font-bold mb-2 block"
+                >MAID FOR YOU</span
+              >
+              <h2 class="text-[#004274] text-4xl font-bold mb-6">
+                A Cleaner Place is a Safer Place.
+              </h2>
+              <p class="text-gray-600 mb-8">
+                Washla cleaning service: We are a company dedicated to giving
+                our customers back the time they deserve to enjoy the things
+                they love.
+              </p>
+              <div class="grid grid-cols-2 gap-6">
+                <div class="flex items-center gap-3">
+                  <div class="text-cyan-500">
+                    <i data-lucide="check-circle" class="w-6 h-6"></i>
+                  </div>
+                  <span class="font-medium">Professional Cleaning</span>
+                </div>
+                <div class="flex items-center gap-3">
+                  <div class="text-cyan-500">
+                    <i data-lucide="check-circle" class="w-6 h-6"></i>
+                  </div>
+                  <span class="font-medium">Fast and efficient</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-20 bg-sky-50">
+        <div class="container mx-auto px-4">
+          <span class="block text-gray-500 text-center text-sm mb-2"
+            >WHY CHOOSE US</span
+          >
+          <h2 class="text-[#004274] text-4xl font-bold text-center mb-4">
+            Our Great Service
+          </h2>
+          <p class="text-gray-600 text-center max-w-2xl mx-auto mb-16">
+            Restoring the beauty and freshness of all your upholstered fabrics
+            and take the work out of housework for you.
+          </p>
+          <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-cyan-500 text-white rounded-lg p-8">
+              <div class="inline-flex mb-6">
+                <i data-lucide="home" class="w-16 h-16"></i>
+              </div>
+              <h3 class="text-2xl font-bold mb-4">Home Cleaning</h3>
+              <p class="leading-relaxed opacity-90">
+                Homes and thoroughly launder them between usage. We give our
+                teams the accusantium doloremque laudantium.
+              </p>
+            </div>
+            <div class="bg-cyan-500 text-white rounded-lg p-8">
+              <div class="inline-flex mb-6">
+                <i data-lucide="wind" class="w-16 h-16"></i>
+              </div>
+              <h3 class="text-2xl font-bold mb-4">Windows Cleaning</h3>
+              <p class="leading-relaxed opacity-90">
+                We are closely monitoring national, state and local health
+                agencies for the most recent developments.
+              </p>
+            </div>
+            <div class="bg-cyan-500 text-white rounded-lg p-8">
+              <div class="inline-flex mb-6">
+                <i data-lucide="briefcase" class="w-16 h-16"></i>
+              </div>
+              <h3 class="text-2xl font-bold mb-4">Office Cleaning</h3>
+              <p class="leading-relaxed opacity-90">
+                Follow these tips from the CDC to help prevent the spread of the
+                seasonal flu and respiratory diseases.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+          <span class="block text-gray-500 text-center text-sm mb-2"
+            >MEET OUR</span
+          >
+          <h2 class="text-[#004274] text-4xl font-bold text-center mb-4">
+            Our Team
+          </h2>
+          <p class="text-gray-600 text-center max-w-2xl mx-auto mb-16">
+            The member of our highly experienced team is dedicated to providing
+            you with only the best service we can possibly provide.
+          </p>
+          <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-white rounded-lg overflow-hidden shadow-lg">
+              <div class="relative bg-purple-100 aspect-[4/5]">
+                <img
+                  src="assets/person1.jpg"
+                  alt="Monica Gordon"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div class="p-6 text-center">
+                <h3 class="text-xl font-bold mb-2">Monica Gordon</h3>
+                <p class="text-gray-500">House Cleaning</p>
+              </div>
+            </div>
+            <div class="bg-white rounded-lg overflow-hidden shadow-lg">
+              <div class="relative bg-sky-100 aspect-[4/5]">
+                <img
+                  src="assets/person2.jpg"
+                  alt="Laura Jones"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div class="p-6 text-center">
+                <h3 class="text-xl font-bold mb-2">Laura Jones</h3>
+                <p class="text-gray-500">Cleaner</p>
+              </div>
+            </div>
+            <div class="bg-white rounded-lg overflow-hidden shadow-lg">
+              <div class="relative bg-gray-100 aspect-[4/5]">
+                <img
+                  src="assets/person3.jpg"
+                  alt="Sara Ryan"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div class="p-6 text-center">
+                <h3 class="text-xl font-bold mb-2">Sara Ryan</h3>
+                <p class="text-gray-500">House Cleaner</p>
+              </div>
+            </div>
+          </div>
+          <div class="flex justify-center mt-8">
+            <div class="flex space-x-2">
+              <button class="w-3 h-3 rounded-full bg-cyan-500"></button>
+              <button class="w-3 h-3 rounded-full bg-gray-300"></button>
+              <button class="w-3 h-3 rounded-full bg-gray-300"></button>
+              <button class="w-3 h-3 rounded-full bg-gray-300"></button>
+              <button class="w-3 h-3 rounded-full bg-gray-300"></button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-20 bg-cyan-500 text-white relative overflow-hidden">
+        <div class="container mx-auto px-4 text-center relative z-10">
+          <div
+            class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-white/20 mb-6"
+          >
+            <i data-lucide="play" class="w-8 h-8"></i>
+          </div>
+          <p class="text-lg mb-4">Cleaning your Worries Away</p>
+          <h2 class="text-4xl font-bold mb-8">Need Help With Cleaning?</h2>
+          <button
+            class="bg-white text-cyan-500 px-8 py-3 rounded-md font-medium hover:bg-white/90 transition-colors"
+          >
+            Request Call Back
+          </button>
+        </div>
+      </section>
+
+      <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div class="text-center">
+              <div class="inline-flex mb-4">
+                <i data-lucide="smile" class="w-12 h-12 text-cyan-500"></i>
+              </div>
+              <div class="text-4xl font-bold text-[#004274] mb-2">385</div>
+              <div class="text-gray-500">Happy Customers</div>
+            </div>
+            <div class="text-center">
+              <div class="inline-flex mb-4">
+                <i data-lucide="home" class="w-12 h-12 text-cyan-500"></i>
+              </div>
+              <div class="text-4xl font-bold text-[#004274] mb-2">842</div>
+              <div class="text-gray-500">Houses Cleaned</div>
+            </div>
+            <div class="text-center">
+              <div class="inline-flex mb-4">
+                <i data-lucide="award" class="w-12 h-12 text-cyan-500"></i>
+              </div>
+              <div class="text-4xl font-bold text-[#004274] mb-2">489</div>
+              <div class="text-gray-500">Awards Received</div>
+            </div>
+            <div class="text-center">
+              <div class="inline-flex mb-4">
+                <i
+                  data-lucide="check-circle"
+                  class="w-12 h-12 text-cyan-500"
+                ></i>
+              </div>
+              <div class="text-4xl font-bold text-[#004274] mb-2">1344</div>
+              <div class="text-gray-500">Glass Cleaned</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+          <span class="block text-gray-500 text-center text-sm mb-2"
+            >WHY CHOOSE US</span
+          >
+          <h2 class="text-[#004274] text-4xl font-bold text-center mb-4">
+            Recent News
+          </h2>
+          <p class="text-gray-600 text-center max-w-2xl mx-auto mb-16">
+            We specialise in intelligent & effective Search and believes in the
+            power of partnerships to grow business.
+          </p>
+          <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-white rounded-lg overflow-hidden shadow-lg">
+              <div class="relative h-64">
+                <img
+                  src="assets/clean1.webp"
+                  alt="News 1"
+                  class="w-full h-full object-cover"
+                />
+                <div
+                  class="absolute top-4 right-4 bg-cyan-500 text-white px-4 py-2 rounded"
+                >
+                  <div class="text-2xl font-bold">12</div>
+                  <div class="text-sm">Nov</div>
+                </div>
+              </div>
+              <div class="p-6">
+                <div class="text-cyan-500 mb-2">CLEANING</div>
+                <h3 class="text-xl font-bold text-[#004274] mb-4">
+                  Temporary Ruling Issued
+                </h3>
+                <p class="text-gray-600 mb-6">
+                  Washla has met the demands of a growing world cleaning
+                  tremendous.
+                </p>
+                <div class="flex items-center">
+                  <img
+                    src="assets/girl1.jpg"
+                    alt="Martha Smith"
+                    class="w-12 h-12 rounded-full mr-4"
+                  />
+                  <div>
+                    <h4 class="font-bold text-[#004274]">Martha Smith</h4>
+                    <p class="text-gray-500 text-sm">Washla CEO</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="bg-white rounded-lg overflow-hidden shadow-lg">
+              <div class="relative h-64">
+                <img
+                  src="assets/clean2.jpg"
+                  alt="News 2"
+                  class="w-full h-full object-cover"
+                />
+                <div
+                  class="absolute top-4 right-4 bg-cyan-500 text-white px-4 py-2 rounded"
+                >
+                  <div class="text-2xl font-bold">11</div>
+                  <div class="text-sm">Nov</div>
+                </div>
+              </div>
+              <div class="p-6">
+                <div class="text-cyan-500 mb-2">CLEANING</div>
+                <h3 class="text-xl font-bold text-[#004274] mb-4">
+                  The Expands California
+                </h3>
+                <p class="text-gray-600 mb-6">
+                  welcomed and every sed ut perspiciatis unde omnis iste natus.
+                </p>
+                <div class="flex items-center">
+                  <img
+                    src="assets/girl2.jpg"
+                    alt="Laura Jones"
+                    class="w-12 h-12 rounded-full mr-4"
+                  />
+                  <div>
+                    <h4 class="font-bold text-[#004274]">Laura Jones</h4>
+                    <p class="text-gray-500 text-sm">Accounting</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="bg-white rounded-lg overflow-hidden shadow-lg">
+              <div class="relative h-64">
+                <img
+                  src="assets/clean3.jpg"
+                  alt="News 3"
+                  class="w-full h-full object-cover"
+                />
+                <div
+                  class="absolute top-4 right-4 bg-cyan-500 text-white px-4 py-2 rounded"
+                >
+                  <div class="text-2xl font-bold">10</div>
+                  <div class="text-sm">Nov</div>
+                </div>
+              </div>
+              <div class="p-6">
+                <div class="text-cyan-500 mb-2">CLEANING</div>
+                <h3 class="text-xl font-bold text-[#004274] mb-4">
+                  Temporary Ruling Issued
+                </h3>
+                <p class="text-gray-600 mb-6">
+                  Washla has met the demands of a growing world. The Cleaning.
+                </p>
+                <div class="flex items-center">
+                  <img
+                    src="assets/girl3.jpg"
+                    alt="Matt Ryan"
+                    class="w-12 h-12 rounded-full mr-4"
+                  />
+                  <div>
+                    <h4 class="font-bold text-[#004274]">Matt Ryan</h4>
+                    <p class="text-gray-500 text-sm">Lawyer</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-white pt-20 pb-6">
+      <div class="container mx-auto px-4">
+        <div class="grid md:grid-cols-4 gap-8 mb-12">
+          <div>
+            <img src="assets/logo.webp" alt="Amiso Logo" class="h-8 mb-6" />
+            <p class="text-gray-600">
+              Washla customers has a tremendous opportunity to answer the call
+              of logistic.
+            </p>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-[#004274] mb-6">Get In Touch</h3>
+            <address class="text-gray-600 not-italic space-y-2">
+              <p>8273 NW 56th ST Miami, Florida,</p>
+              <p>33195 United States</p>
+              <p>info@amiso.com</p>
+              <p>052 5401 3322</p>
+            </address>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-[#004274] mb-6">Quick Links</h3>
+            <div class="grid grid-cols-2 gap-4">
+              <a href="#" class="text-gray-600 hover:text-cyan-500">Home</a>
+              <a href="#" class="text-gray-600 hover:text-cyan-500">FAQ</a>
+              <a href="#" class="text-gray-600 hover:text-cyan-500">About</a>
+              <a href="#" class="text-gray-600 hover:text-cyan-500"
+                >Contact Us</a
+              >
+              <a href="#" class="text-gray-600 hover:text-cyan-500">Services</a>
+              <a href="#" class="text-gray-600 hover:text-cyan-500">Gallery</a>
+              <a href="#" class="text-gray-600 hover:text-cyan-500">Team</a>
+              <a href="#" class="text-gray-600 hover:text-cyan-500">Blogs</a>
+            </div>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-[#004274] mb-6">
+              Our Newsletter
+            </h3>
+            <p class="text-gray-600 mb-6">
+              Subscribe to our newsletter to receive the latest news about our
+              services.
+            </p>
+            <form class="flex gap-2">
+              <input
+                type="email"
+                placeholder="Your email address"
+                class="flex-grow px-4 py-2 bg-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500"
+              />
+              <button
+                type="submit"
+                class="px-6 py-2 bg-cyan-500 text-white rounded-md hover:bg-cyan-600 transition-colors"
+              >
+                SIGN UP
+              </button>
+            </form>
+          </div>
+        </div>
+        <div
+          class="border-t pt-6 flex flex-col sm:flex-row justify-between items-center"
+        >
+          <p class="text-gray-600">© 2023 amiso all rights reserved.</p>
+          <div class="flex gap-6 mt-4 sm:mt-0">
+            <a href="#" class="text-gray-400 hover:text-cyan-500">
+              <i data-lucide="facebook" class="w-5 h-5"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-cyan-500">
+              <i data-lucide="twitter" class="w-5 h-5"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-cyan-500">
+              <i data-lucide="instagram" class="w-5 h-5"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-cyan-500">
+              <i data-lucide="linkedin" class="w-5 h-5"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      lucide.createIcons();
+
+      // Simple slider functionality
+      const slides = document.querySelectorAll(".relative.bg-cyan-500");
+      let currentSlide = 0;
+
+      function showSlide(index) {
+        slides[currentSlide].style.display = "none";
+        slides[index].style.display = "flex";
+        currentSlide = index;
+      }
+
+      document.getElementById("prevSlide").addEventListener("click", () => {
+        let index = currentSlide - 1;
+        if (index < 0) index = slides.length - 1;
+        showSlide(index);
+      });
+
+      document.getElementById("nextSlide").addEventListener("click", () => {
+        let index = (currentSlide + 1) % slides.length;
+        showSlide(index);
+      });
+
+      // Initialize the first slide
+      showSlide(0);
+    </script>
+
+
+  </body>
+</html>
